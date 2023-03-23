@@ -1,11 +1,11 @@
 {
-  "name": "parcel-project-template",
+  "name": "foodstamaine",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://alenka-soroka.github.io/FoodSta",
+  "homepage": "https://EllenBredis.github.io/foodstamaine",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /FoodSta/"
+    "build": "parcel build src/*.html --public-url /foodstamaine/"
   },
   "repository": {
     "type": "git",
