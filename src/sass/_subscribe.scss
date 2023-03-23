@@ -1,0 +1,95 @@
+.subscribe {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    position: relative;
+   
+
+    @media screen and (min-width: 1280px) {
+        padding-bottom: 100px;
+        padding-top: 100px;
+    }
+
+}
+
+.subscribe__title {
+   
+    @include fonts(28px, 34px, 700);
+    margin-bottom: 20px;
+
+
+    @media screen and (min-width: 768px) {
+        max-width: 656px;
+        @include fonts(42px, 50px, 700);
+    }
+
+}
+
+.subscribe__desc {
+    
+    @include fonts(14px, 16px);
+    margin-bottom: 40px;
+
+    @media screen and (min-width: 768px) {
+        max-width: 656px;
+        @include fonts(16px, 24px);
+        margin-bottom: 24px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        margin-bottom: 24px;
+    }
+}
+
+
+.subscription__btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 11px 22px;
+    width: 103px;
+    height: 42px;
+    border-radius: 30px;
+    border: none;
+    background-color: $ButtonColor;
+    margin-left: auto;
+    cursor: pointer;
+    @include fonts(13px, 20px, 500);
+    @include transition-base (background-color);
+
+    @media screen and (min-width: 768px) {
+            margin-left: 0;
+        }
+
+  }
+
+.subscription__btn:hover,
+.subscription__btn:focus{
+    background-color: $AccentButtonColor;
+    }
+
+.subscribe__img{
+@extend %reset-img;
+position: absolute;
+z-index: 90;
+left: 25%;
+top: -45px;
+
+@media screen and (min-width: 480px) {
+        left: 30%;
+        top: -40px;
+
+    }
+
+@media screen and (min-width: 768px) {
+    left: 60%;
+        top: -75px;
+
+    }
+
+@media screen and (min-width: 1280px) {
+    left: 60%;
+    top: -65px;
+
+}
+}
+

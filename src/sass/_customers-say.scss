@@ -1,0 +1,92 @@
+.customers-say {    
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
+    background-image: url('../images/costomers/bg-mob.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;    
+    
+    @media screen and (min-width: 768px) {           
+        padding-bottom: 120px;             
+        background-image: url('../images/costomers/bg-tab.png');
+    }
+    @media screen and (min-width: 1280px) {        
+        padding-top: 100px;
+        padding-bottom: 200px;
+        background-image: url('../images/costomers/bg@1x-des.jpg');
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: url('../images/costomers/bg@2x-des.jpg');
+        }
+    }   
+
+    &__title {
+        @include fonts(28px, 33px, 700);
+        margin-bottom: 20px;
+        @media screen and (min-width: 768px) {       
+            @include fonts(42px, 49px, 700);
+        }
+    }
+    &__descr {
+        margin-bottom: 32px;
+        @include fonts(14px, 16px);
+        @media screen and (min-width: 768px) {       
+            @include fonts(16px, 19px);
+        }
+    }
+    &__thumb {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        @media screen and (min-width: 768px) {       
+            flex-wrap: nowrap;
+            gap: 32px;
+        }
+        @media screen and (min-width: 1280px) {    
+            gap: 139px;
+        }
+    }
+}
+
+.review {
+    
+    background-color: $MainColor;
+    padding: 8px;
+    border-radius: 0px 30px 30px 30px;
+    @media screen and (min-width: 768px) {       
+        padding: 12px;
+        
+    }
+    @media screen and (min-width: 1280px) {    
+        padding: 14px;
+        
+    }
+    &__descr {
+        margin-top: 22px;
+        margin-bottom: 40px;
+        @include fonts(16px, 19px, 700);
+        @media screen and (min-width: 768px) {       
+            margin-top: 28px;
+            @include fonts(18px, 21px, 700);
+        }
+    }
+    &__client {
+        display: flex;
+    }
+    &__client-thumb {
+        margin-left: 16px;
+        padding-right: 16px;
+        border-right: 0.85px solid $MainBorderColor;
+    }
+    &__name {
+        @include fonts(14px, 20px, 500);
+    }
+    &__name-descr {
+        @include fonts(14px, 20px);
+    }
+    &__img {    
+        @extend %reset-img;    
+    }
+}
+

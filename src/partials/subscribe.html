@@ -1,0 +1,41 @@
+<section class="subscribe">
+  <div class="container">
+    <img
+      class="subscribe__img"
+      srcset="
+        ./images/Subscribe/banan-161.png   161w,
+        ./images/Subscribe/banan-281.png   281w,
+        ./images/Subscribe/banan-322.png   322w,
+        ./images/Subscribe/banan-546.png   546w,
+        ./images/Subscribe/banan-562.png   562w,
+        ./images/Subscribe/banan-1092.png 1092w
+      "
+      sizes="(min-width: 1280px) 546px, (min-width: 768px) 281px, (min-width: 480px) 161px, (max-width: 480px) 161px, 100vw"
+      src="./images/Subscribe/banan-161.png"
+      alt="banan"
+    />
+    <h2 class="subscribe__title">Subscribe To Get Special Offers</h2>
+    <p class="subscribe__desc">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+      varius enim in eros elementum tristique.
+    </p>
+    <form class="form-subscription" novalidate>
+      <input
+        class="form-subscription__input"
+        type="email"
+        pattern="[^@\s]+@[^@\s]+"
+        name="email"
+        autocomplete="off"
+        placeholder="Enter your email"
+        required
+      />
+      <div class="contact-form-notfication">
+        <svg class="notfication__icon" width="12" height="22">
+          <use href="./images/icons.svg#sign"></use>
+        </svg>
+        <span> Not a valid email address (example@email.com) </span>
+      </div>
+      <button class="subscription__btn" type="button">Subscribe</button>
+    </form>
+  </div>
+</section>

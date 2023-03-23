@@ -1,0 +1,73 @@
+<header class="header">
+  <div class="container header__container">
+    <a class="logo header__logo link" href="">
+      <img
+        srcset="
+          ./images/logo/logo_66_1x.png 1x,
+          ./images/logo/logo_66_2x.png 2x
+        "
+        src="./images/logo/logo_66_1x.png"
+        alt="logo"
+      />
+    </a>
+    <button class="menu-burger" type="button" data-menu-open>
+      <svg width="28" height="28">
+        <use href="./images/icons.svg#burger-menu"></use>
+      </svg>
+    </button>
+
+    <nav class="nav">
+      <ul class="nav__list list">
+        <li class="nav__item">
+          <a class="nav__link nav__link--current link" href="#home">Home</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link link" href="#about">About</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link link" href="#service">Service</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link link" href="#menu">Menu</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="header__btn" type="button" >Order Now</button>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+
+<div class="menu-overlay is-open" data-menu>
+  <div class="menu-container">
+    <button class="menu-btn" type="button" data-menu-close>
+      <svg class="menu-close-icon" width="11" height="11">
+        <use href="./images/icons.svg#menu-close"></use>
+      </svg>
+    </button>
+
+    <ul class="mobile-nav list">
+      <li class="mobile-nav-item">
+        <a href="#home" class="mobile-link link">Home</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="#about" class="mobile-link link">About</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="#service" class="mobile-link link">Service</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="#menu" class="mobile-link link">Menu</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="#contact" class="mobile-link link">Contact</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script src="./js/menu.js"></script>

@@ -1,0 +1,180 @@
+<section class="hero" id="about">
+  <div class="container hero__container">
+    <div class="hero__title--wrap">
+      <h1 class="hero__title">Enjoy Your Favorite Food From Anywhere</h1>
+      <p class="hero__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+        ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      </p>
+      <button class="hero__btn" type="button" data-modal-open>Order Now</button>
+    </div>
+
+    <!-- <div class="hero__img--wrap">
+      <img
+        class="hero__img"
+        srcset="
+          ./images/hero/meatballs-292.png   292w,
+          ./images/hero/meatballs-528.png   528w,
+          ./images/hero/meatballs-584.png   584w,
+          ./images/hero/meatballs-1056.png 1056w
+        "
+        sizes="(min-width: 1280px) 528px, (min-width: 768px) 292px, 100vw"
+        src="./images/hero/meatballs-528.png"
+        alt="meatballs wit souce"
+      />
+    </div> -->
+    <!-- SLIDER -->
+    <div class="slider-content swiper__border">
+      <div class="swiper-button-prev swiper__btn swiper__btn--left">
+        <svg class="swiper__icon" width="28" height="34" aria-label="previous">
+          <use href="./images/icons.svg#arrow-left"></use>
+        </svg>
+      </div>
+      <div class="swiper-button-next swiper__btn swiper__btn--right">
+        <svg class="swiper__icon" width="28" height="34" aria-label="next">
+          <use href="./images/icons.svg#arrow-right"></use>
+        </svg>
+      </div>
+
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide flex">
+            <img
+              class="hero__img"
+              srcset="
+                ./images/hero/meatballs-292.png   292w,
+                ./images/hero/meatballs-528.png   528w,
+                ./images/hero/meatballs-584.png   584w,
+                ./images/hero/meatballs-1056.png 1056w
+              "
+              sizes="(min-width: 1280px) 528px, (min-width: 768px) 292px, 100vw"
+              src="./images/hero/meatballs-528.png"
+              alt="meatballs wit souce"
+            />
+          </div>
+
+          <div class="swiper-slide flex">
+            <img
+              class="hero__img"
+              srcset="
+                ./images/hero/salad-292.png  292w,
+                ./images/hero/salad-528.png  528w,
+                ./images/hero/salad-584.png  584w,
+                ./images/hero/salad1056.png 1056w
+              "
+              sizes="(min-width: 1280px) 528px, (min-width: 768px) 292px, 100vw"
+              src="./images/hero/salad-528.png"
+              alt="meatballs wit souce"
+            />
+          </div>
+
+          <div class="swiper-slide flex">
+            <img
+              class="hero__img"
+              srcset="
+                ./images/hero/egg_bread-292.png   292w,
+                ./images/hero/egg_bread-528.png   528w,
+                ./images/hero/egg_bread-584.png   584w,
+                ./images/hero/egg_bread-1056.png 1056w
+              "
+              sizes="(min-width: 1280px) 528px, (min-width: 768px) 292px, 100vw"
+              src="./images/hero/egg_bread-528.png"
+              alt="meatballs wit souce"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button type="button" class="modal__close-btn" data-modal-close>
+      <svg class="modal__close-icon" width="24" height="24">
+        <use href="./images/icons.svg#menu-close"></use>
+      </svg>
+    </button>
+    <form class="modal-form" novalidate>
+      <strong class="modal-form__contact-head">Order Form</strong>
+      <div
+        class="modal-form__group"
+        role="group"
+        aria-labelledby="contact_head"
+        id="contact_head"
+      >
+        <label class="modal-form__field">
+          <span class="modal-form__label">Name</span>
+          <input
+            class="modal-form__input"
+            type="text"
+            name="name"
+            required
+            minlength="2"
+            maxlength="25"
+            placeholder="Your name"
+            required
+          />
+          <div class="modal-form-notfication">
+            <svg class="modal-notfication__icon" width="12" height="22">
+              <use href="./images/icons.svg#sign"></use>
+            </svg>
+            <span> The name must be between 3 and 25 characters </span>
+          </div>
+        </label>
+
+        <label class="modal-form__field">
+          <span class="modal-form__label">Phone number</span>
+          <input
+            class="modal-form__input add"
+            type="tel"
+            name="tel"
+            placeholder="+38(0_ _) _ _ _   _ _   _ _"
+            pattern="^+380\d{3}\d{2}\d{2}\d{2}$"
+            minlength="13"
+            maxlength="13"
+            required
+          />
+          <div class="modal-form-notfication">
+            <svg class="modal-notfication__icon" width="12" height="22">
+              <use href="./images/icons.svg#sign"></use>
+            </svg>
+            <span> This phone must be in the format +380990000000 </span>
+          </div>
+        </label>
+
+        <label class="modal-form__field">
+          <span class="modal-form__label">E-mail</span>
+          <input
+            class="modal-form__input add"
+            type="email"
+            name="email"
+            placeholder="example@gmail.com"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            title="Invalid email address"
+            required
+          />
+          <div class="modal-form-notfication">
+            <svg class="modal-notfication__icon" width="12" height="22">
+              <use href="./images/icons.svg#sign"></use>
+            </svg>
+            <span> Please enter a valid email address </span>
+          </div>
+        </label>
+      </div>
+
+      <button
+        class="btn modal-form__btn"
+        type="submit"
+        title="All fields are required"
+      >
+        Send
+      </button>
+    </form>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="./index.js"></script>

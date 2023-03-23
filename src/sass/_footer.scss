@@ -1,0 +1,241 @@
+.footer{
+    padding-top: 60px;
+        padding-bottom: 60px;
+    box-shadow: $ShadowFooter;
+    background-image: url(../images/footer/mob-apple-frame@1x.png),
+    url(../images/footer/mob-apple@1x.png),
+    url(../images/footer/orange-frame@1x.png),
+    url(../images/footer/orange@1x.png),    
+    url(../images/footer/footer-down-mob@1x.png);
+    background-repeat: no-repeat;
+    background-position: left 132px, left 132px, right top, right 25px, center bottom;
+    
+    @media screen and (min-width: 768px) {
+        padding-top: 100px;
+            padding-bottom: 100px;
+        background-image: url(../images/footer/orange-tab@1x.png), url(../images/footer/footer-down-tab@1x.png);
+        background-position: right top, center bottom;
+        
+    }
+    @media screen and (min-width: 1280px) {
+        background-image: url('../images/footer/footer@1x_des.png');
+        background-position: center bottom;
+    }  
+        
+    
+}
+
+
+.footer__hight-side {
+    @media screen and (min-width: 1280px) {
+        display: flex;
+        
+    }
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    max-width: 380px;
+    
+
+    @media screen and (min-width: 768px) {
+        align-items: center;
+    }
+
+       @media screen and (min-width: 1280px) {
+            margin-bottom: 0;
+                align-items: baseline;
+        }
+
+    }
+
+.footer__logo {
+    width: 69px;
+    height: 51px;    
+    
+
+    @media screen and (min-width: 768px) {
+        margin-right: 114px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        margin-right: 148px;
+        }
+}
+
+    
+.footer-nav__list {
+    
+    @extend %reset-list;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    margin-right: 101px;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        gap: 28px;
+    }
+}
+
+.footer-nav__link {
+    @extend %reset-link;
+    color: $SecondaryTextColor;
+    
+    @include fonts(14px, 16px);
+    
+    @include transition-base(color);
+    
+
+    @media screen and (min-width: 768px) {
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+}
+.footer-nav__link::after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: $AccentTextColor;
+     @include transition-base(width);
+}
+.footer-nav__link:hover::after,
+.footer-nav__link:focus::after {
+    color: $AccentTextColor;    
+    width: 100%;    
+}
+.footer-nav__link:hover,
+.footer-nav__link:focus {
+    color: $AccentTextColor;  
+    
+}
+
+.footer-subsc{
+    @media screen and (min-width: 1280px) {
+            margin-left: 320px;
+        }
+    
+}
+
+.subscribe-title{
+    @include fonts(14px, 21px, 500);
+    margin-bottom: 12px;
+    
+}
+
+.subscription__btn-footer {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 11px 22px;
+    width: 103px;
+    height: 42px;
+    border-radius: 30px;
+    border: 1px solid $MainBorderColor;
+    background-color: inherit;
+    margin-left: auto;
+    margin-bottom: 20px;
+    cursor: pointer;
+    @include fonts(13px, 20px, 500);
+    @include transition-base(background-color);
+
+    @media screen and (min-width: 768px) {
+            margin-left: 0;
+            margin-bottom: 0;
+        }
+  
+}
+.subscription__btn-footer:hover,
+.subscription__btn-footer:focus {
+    background-color: $DefaultBorderColor;
+}
+
+
+.policy{
+    display: flex;
+    gap: 3px;
+    margin-bottom: 60px;
+    
+
+    @media screen and (min-width: 768px) {
+           margin-bottom: 100px;
+        margin-top: 12px;
+        }
+
+     @media screen and (min-width: 1280px) {
+           margin-bottom: 80px;
+        margin-top: 12px;
+           
+                 }
+
+   }
+
+.policy__dsc{
+    @include fonts(10px, 12px);
+    @media screen and (min-width: 768px) {
+        @include fonts(12px, 14px);
+    }
+    
+}
+
+.policy__link{
+    @include fonts(10px, 12px);
+    color: $MainBorderColor;
+    @include transition-base(color);
+    @media screen and (min-width: 768px) {
+        @include fonts(12px, 14px);
+    }
+}
+.policy__link:hover,
+.policy__link:focus {
+    color: $AccentTextColor;
+    
+}
+
+.footer-info{
+    @media screen and (min-width: 768px) {
+           display: flex;
+           align-items: flex-end;
+}
+}
+
+.footer-info__list{
+    @extend %reset-list;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: 768px) {
+        justify-content: flex-start;
+        gap: 20px;
+           margin-bottom: 0;
+        }
+}
+
+.footer-info__link{
+    @include fonts(10px, 12px);
+    color: $MainBorderColor;
+    @include transition-base(color);
+    @media screen and (min-width: 768px) {
+        @include fonts(12px, 14px);
+    }
+}
+.footer-info__link:hover,
+.footer-info__link:focus {
+    color: $AccentTextColor;
+
+}
+
+.copyright{
+    @include fonts(10px, 12px);
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+            margin-left: auto;
+            @include fonts(12px, 14px);
+        }
+   
+    }

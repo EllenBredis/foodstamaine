@@ -1,0 +1,104 @@
+.form-subscription {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    
+    @media screen and (min-width: 768px) {
+        gap: 22px;
+        flex-direction: row;
+    }
+
+    @media screen and (min-width: 1280px) {
+        gap: 32px;
+    }
+}
+
+.footer__form-subscription{
+    @media screen and (min-width: 768px) {
+            gap: 12px;
+            // margin-bottom: 12px;
+
+    @media screen and (min-width: 1280px) {
+             gap: 13px;
+            //  margin-bottom: 12px;
+                }
+    }
+   
+}
+
+.form-subscription__input {
+    max-width: 440px;
+    height: 42px;
+    border-radius: 30px;
+    background-color: inherit;
+    border: 1px solid $DefaultBorderColor;
+    outline: none;
+    padding: 11px 12px;
+    @include transition-base (border);
+
+    @media screen and (min-width: 768px) {
+        width: 394px;
+        @include fonts(12px, 18px);
+
+    }
+
+    &::placeholder {
+        @include fonts(12px, 18px);
+        color: $PlaseholderTextColor;
+
+    }
+}
+
+.footer-form-subscription__input{
+    @media screen and (min-width: 768px) {
+            width: 279px;
+                              }
+}
+.form-subscription__input:not(:placeholder-shown):required:valid {
+    border-color: $MainBorderColor;
+}
+
+.form-subscription__input:not(:placeholder-shown):required:invalid {
+            border-color: $ErrorBorderColor;}
+
+
+.contact-form-notfication {
+   display: inline-block;
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+    top:20px;
+    left: 115px;
+    transform: translate(-50%, 15px) scale(0.3);
+    transform-origin: center;
+    opacity: 0;
+    @include transition-base (opacity transform);
+   
+
+    @include fonts(10px, 15px);
+    color: $ErrorBorderColor;
+    text-align: center;
+
+   }
+
+.footer__contact-form-notfication{
+    top: 14px;
+    @media screen and (max-width: 480px) {
+            top: 20px;
+    
+        }
+}
+
+
+.notfication__icon{
+    padding-top: 10px;
+}
+
+
+.form-subscription__input:invalid:not(:placeholder-shown)~.contact-form-notfication {
+    opacity: 1;
+    transform: translate(-50%, 15px) scale(1);
+}

@@ -1,0 +1,28 @@
+@import './common';
+
+// utils styles
+@import'./utils/variables';
+@import './utils/decimals';
+@import'./utils/placeholders';
+@import'./utils/mixins';
+@import'./utils/visually-hidden';
+
+// base styles
+@import'./base/base';
+@import'./base/resets';
+@import'./base/container';
+
+
+
+@import'./header';
+@import'./hero';
+@import'./offerings';
+@import'./favorites';
+@import'./customers-say';
+@import'./subscribe';
+@import'./footer';
+
+
+//components
+@import'./components/subscription-form';
+
